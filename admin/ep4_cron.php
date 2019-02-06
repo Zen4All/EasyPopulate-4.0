@@ -114,7 +114,10 @@ if (defined('FILENAME_EASYPOPULATE_4') && file_exists(DIR_FS_ADMIN . (!strstr(FI
 
   $ep_debug_logging_all = false;
 
-  require DIR_WS_MODULES . 'easypopulate_4_version.php';
+  $curver_detail = '4.0.37.6';
+  if (file_exists(DIR_WS_MODULES . 'easypopulate_4_version.php')) {
+    require DIR_WS_MODULES . 'easypopulate_4_version.php';
+  }
   $display_output = ''; // results of import displayed after script run
   $ep_dltype = NULL;
   $ep_stack_sql_error = false; // function returns true on any 1 error, and notifies user of an error
